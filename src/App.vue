@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  
+  <AppHeader/>
 </template>
 
 <style scoped lang="scss">
