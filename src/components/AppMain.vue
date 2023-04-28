@@ -22,12 +22,17 @@ export default {
 <template>
   <div class="ms_container">
     <h3>Popular Cringy Stuff</h3>
-    <div class="ms_cards-display ms_flex">
+    <div class="ms_cards-display ms_flex ms_wrap">
         <div v-for="cosplay in store.cosplays" :key="cosplay.id" class="card ms_card">
             <AppCard :cosplay="cosplay"/>
         </div>
     </div>
     <h2>Recent Cringe</h2>
+    <div class="ms_cards-display ms_flex ms_wrap">
+        <div v-for="cosplay in store.cosplays" :key="cosplay.id" class="card ms_card">
+            <AppCard :cosplay="cosplay"/>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -35,6 +40,9 @@ export default {
 @use "../style/partials/variables.scss" as *;
 .ms_flex{
     display: flex;
+}
+.ms_wrap {
+    flex-wrap: wrap;
 }
 .ms_container {
     width: 90%;
@@ -48,6 +56,8 @@ export default {
 }
 .ms_card {
     width: calc(100% / 6 - 50px);
+    height: 200px;
+    margin-bottom: 20px;
 }
 </style>
 

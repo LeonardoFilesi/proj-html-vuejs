@@ -17,9 +17,7 @@ export default {
 </script>
 
 <template>
-  
-<div >
-    <img src="" class="card-img-top">
+    <img :src="cosplay.img[0]" class="card-img-top">
   <div class="card-body">
     <h5 class="card-title">{{ this.cosplay.info }}</h5>
   </div>
@@ -32,12 +30,10 @@ export default {
   <div class="ms_card-footer">
     <div class="ms_card-vote"></div>
     <div class="ms_card-price">
-        <span class="ms_card-ogprice"></span>
-        <span class="ms_card-discprice"></span>
+        <span class="ms_card-ogprice">{{ this.cosplay.ogprice }} </span>
+        <span class="ms_card-discprice">{{ this.cosplay.discprice }}</span>
     </div>
   </div>
-</div>
-
 </template>
 
 <style scoped lang="scss">
@@ -45,7 +41,14 @@ export default {
 .ms_flex{
     display: flex;
 }
+.ms_wrap {
+    flex-wrap: wrap;
+}
 .ms_card {
     width: calc(100% / 6 - 50px);
+}
+.ms_card-price {
+    display: flex;
+    flex-direction: column;
 }
 </style>
