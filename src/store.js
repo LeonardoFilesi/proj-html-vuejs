@@ -70,30 +70,23 @@ export const store = reactive({
         {
             id: 1,
             img: "./assets/img/cringe-cosplay-1.jpg",
-            info: "",
+            info: "She is not his gf",
             ogprice: "$69.99",
             discprice: "$35",
             filter: "Cringe",
             popular: true
         }, {
-            img: "./assets/img/cringe-cosplay-1.jpg",
-            info: "",
-            ogprice: "$19.99",
-            discprice: "$10",
-            filter: "Disgusting",
-            popular: true
-        }, {
             id: 2,
             img: "./assets/img/cringe-cosplay-2.jpg",
-            info: "",
+            info: "Nyan nyan mf",
             ogprice: "$19.99",
-            discprice: "$19.99",
+            discprice: "$10",
             filter: "Design",
-            popular: false
+            popular: true
         }, {
             id: 3,
             img: "./assets/img/cringe-cosplay-3.png",
-            info: "",
+            info: "Cardboard Troopers",
             ogprice: "$69.99",
             discprice: "$35",
             filter: "Development",
@@ -101,7 +94,7 @@ export const store = reactive({
         }, {
             id: 4,
             img: "./assets/img/cringe-cosplay-4.jpg",
-            info: "",
+            info: "Furry Family",
             ogprice: "$34.99",
             discprice: "$18",
             filter: "Furry",
@@ -109,7 +102,7 @@ export const store = reactive({
         }, {
             id: 5,
             img: "./assets/img/cringe-cosplay-5.jpg",
-            info: "",
+            info: "*sharingan* I'm fast af boiii",
             ogprice: "$49.99",
             discprice: "$25",
             filter: "2 Much Weeb",
@@ -117,7 +110,7 @@ export const store = reactive({
         }, {
             id: 6,
             img: "./assets/img/cringe-cosplay-6.jpg",
-            info: "",
+            info: "New Hulk",
             ogprice: "$19.99",
             discprice: "$19.99",
             filter: "Cringe",
@@ -125,15 +118,15 @@ export const store = reactive({
         }, {
             id: 7,
             img: "./assets/img/cringe-cosplay-7.jpg",
-            info: "",
+            info: "Er battemann dei poveri",
             ogprice: "$99.99",
             discprice: "$45",
-            filter: "Furry",
+            filter: "Design",
             popular: true
         }, {
             id: 8,
             img: "./assets/img/cringe-cosplay-8.jpg",
-            info: "",
+            info: "Robot 104(47)",
             ogprice: "--",
             discprice: "$199.99",
             filter: "Design",
@@ -141,7 +134,7 @@ export const store = reactive({
         }, {
             id: 9,
             img: "./assets/img/cringe-cosplay-9.jpg",
-            info: "",
+            info: "Shitto",
             ogprice: "$139.99",
             discprice: "$70",
             filter: "Disgusting",
@@ -149,22 +142,22 @@ export const store = reactive({
         }, {
             id: 10,
             img: "./assets/img/cringe-cosplay-10.png",
-            info: "",
+            info: "Wonder Wobear",
             ogprice: "$129.99",
             discprice: "$65",
             filter: "Cringe",
         }, {
             id: 11,
             img: "./assets/img/cringe-cosplay-11.jpg",
-            info: "",
+            info: "The Eyes of the Abuse",
             ogprice: "$199.99",
             discprice: "$100",
-            filter: "2 Much Weeb",
+            filter: "Design",
             popular: false
         }, {
             id: 12,
             img: "./assets/img/cringe-cosplay-12.jpg",
-            info: "",
+            info: "Paper Man",
             ogprice: "$199.99",
             discprice: "$100",
             filter: "Cringe",
