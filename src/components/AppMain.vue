@@ -1,6 +1,7 @@
 <script>
 import {store} from "../store"
 import AppCard from "./AppCard.vue"
+import AppPopularCards from "./AppPopularCards.vue"
 
 export default {
    data() {
@@ -11,7 +12,8 @@ export default {
         }
    },
    components: {
-    AppCard
+    AppCard,
+    AppPopularCards
    },
    methods: {
       filterCards(filter) {
@@ -32,11 +34,7 @@ export default {
 <template>
     <div class="ms_container">
         <h3>Popular Cringy Stuff</h3>
-        <div class="ms_cards-display ms_flex ms_wrap">
-            <div v-for="cosplay in store.cosplays" :key="cosplay.id" class="card ms_card">
-                <AppCard :cosplay="cosplay"/>
-            </div>
-        </div>
+        <AppPopularCards/>
    </div>
     <div class="ms_main-jumbo">
         <img src="../assets/img/Cattura.JPG" alt="">
@@ -83,14 +81,14 @@ export default {
 }
 .ms_cards-display {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
 }
 .ms_card {
-    width: calc(100% / 6 - 30px);
-    height: 200px;
+    width: calc(100% / 6 - 50px);
+    
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 10px 10px;
     outline: 1px solid $venus;
     border-radius: 10px;
 }

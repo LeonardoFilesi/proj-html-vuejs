@@ -137,7 +137,7 @@ export const store = reactive({
             info: "Shitto",
             ogprice: "$139.99",
             discprice: "$70",
-            filter: "Disgusting",
+            filter: "2 Much Weeb",
             popular: true
         }, {
             id: 10,
