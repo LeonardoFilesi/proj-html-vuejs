@@ -22,10 +22,18 @@ export default {
 </script>
 
 <template>
+ <div class="app">
   <AppHeader/>
   <AppMain/>
+ </div>
 </template>
 
 <style scoped lang="scss">
 @use "./style/general.scss";
+.app {
+  padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 </style>

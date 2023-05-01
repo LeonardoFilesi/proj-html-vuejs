@@ -58,6 +58,7 @@ export default {
            
         </div>
     </section>
+    
     <section class="ms_jumbotron-bar ms_flex">
         <a href="#" v-for="element in store.jumbotron_bar" :key="element.id" class="ms_jumbo-bar">{{ element.text }}</a>
         <span v-for="element in store.jumbotron_bar" :key="element.id" class="ms_jumbo-bar">{{ element.icon }}</span>
@@ -102,6 +103,7 @@ a {
 }
 hr {
     color: $mystic;
+    width: 100%;
 }
 .ms_menu-bar {
     background-color: $white;
