@@ -1,5 +1,7 @@
 <script>
-import {store} from "../store"
+import {store} from "../store";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 
 export default {
    data() {
@@ -8,15 +10,15 @@ export default {
         }
    },
    components: {
-
+    FontAwesomeIcon
    },
    props: {
     cosplay: Object
    },
    methods: {
-   /*  getImagePath() {
-      return new URL(this.cosplays.img, import.meta.url).href;
-    } */
+    getImagePath() {
+      return new URL(`${img}`, import.meta.url).href;
+    }
 
    }
 }
@@ -24,7 +26,7 @@ export default {
 
 <template>
   <!-- this.cosplay.img -->
-    <img :src="this.cosplay.img" class="card-img-top">
+    <img :src="getImagePath" class="card-img-top">
   <div class="card-body">
     <h5 class="card-title">{{ this.cosplay.info }}</h5>
   </div>

@@ -46,7 +46,7 @@ export default {
     </div>
     <div class="ms_container">
         <h2>Recent Cringe</h2>
-        <div>
+        <div class="ms_buttons ms_flex">
             <button @click="allCards('All')">All</button>     
             <button @click="filterCards('Cringe')">Cringe</button>
             <button @click="filterCards('Design')">Design</button>
@@ -55,8 +55,10 @@ export default {
             <button @click="filterCards('2 Much Weeb')">2 Much Weeb</button>
         </div>
         <div class="ms_cards-display ms_flex ms_wrap">
-            <div v-for="cosplay in filteredCards" :key="cosplay.id" :data="cosplay" class="card ms_card">
-                <AppCard :cosplay="cosplay"/>
+            <div v-if="searchQuery.length === 0">
+                <div v-for="cosplay in filteredCards" :key="cosplay.id" :data="cosplay" class="card ms_card">
+                    <AppCard :cosplay="cosplay"/>
+                </div>
             </div>
         </div>
     </div>
@@ -67,7 +69,13 @@ export default {
 .ms_container button {
     margin: 5px 10px 5px 0px;
 }
-
+.ms-container h2 {
+    display: flex;
+    justify-content: center;
+}
+.ms_buttons {
+    justify-content: center;
+}
 .ms_flex{
     display: flex;
 }
@@ -81,12 +89,11 @@ export default {
 }
 .ms_cards-display {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
 }
 .ms_card {
-    width: calc(100% / 6 - 50px);
-    
+    width: calc(100% / 6 - 40px);
     padding: 10px;
     margin: 10px 10px;
     outline: 1px solid $venus;

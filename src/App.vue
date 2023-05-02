@@ -12,19 +12,24 @@ export default {
   },
   data() {
     return {
-      store
+      store,
+      filteredCards: []
     }
   },
   methods: {
-
+    handleSearch(query) {
+      this.filteredCards = store.cosplays.filter(cosplay =>
+        cosplay.title.toLowerCase().includes(query.toLowerCase()));
+    }
   }
 }
 </script>
 
 <template>
  <div class="app">
-  <AppHeader/>
-  <AppMain/>
+  <AppHeader @search="handleSearch"/>
+  <AppMain :filteredCards="filteredCards"/>
+  <AppFooter/>
  </div>
 </template>
 

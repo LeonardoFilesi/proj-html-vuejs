@@ -4,11 +4,17 @@ import {store} from "../store"
 export default {
    data() {
         return {
-           store
+           store,
+           searchQuery: ""
         }
    },
    components: {
 
+   },
+   methods: {
+    search() {
+        this.$emit('search', this.searchQuery);
+    }
    }
 }
 </script>
@@ -39,6 +45,8 @@ export default {
         <input type="text"
             class="form-control me-3"
             placeholder="Search Courses"
+            v-model="searchQuery"
+            @keydown.enter="search"
         />
 
         <div class="ms_flex">
